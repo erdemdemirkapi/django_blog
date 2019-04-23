@@ -1,2 +1,4 @@
 # Environments
 venv/
+
+django_blog/__pycache__
