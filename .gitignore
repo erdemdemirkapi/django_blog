@@ -2,3 +2,7 @@
 venv/
 
 django_blog/__pycache__
+home/__pycache__
+post/__pycache__
+home/migrations/__pycache__
+post/migrations/__pycache__
