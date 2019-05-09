@@ -6,3 +6,5 @@ home/__pycache__
 post/__pycache__
 home/migrations/__pycache__
 post/migrations/__pycache__
+
+.DS_Store

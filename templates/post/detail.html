@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Index</title>
-    </head>
-    <body>
-        {{ post.id }} <br/>
-        {{ post.title }} <br/>
-        {{ post.content }} <br/>
-        {{ post.publishing_date }} <br/>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block body %}
+
+    {{ post.id }} <br/>
+    {{ post.title }} <br/>
+    {{ post.content }} <br/>
+    {{ post.publishing_date }} <br/>
+
+{% endblock %}
