@@ -4,7 +4,7 @@ from .forms import PostForm
 from django.contrib import messages
 
 def post_index(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-publishing_date')
     return render(request, 'post/index.html', { 'posts': posts })
 
 def post_detail(request, id):
