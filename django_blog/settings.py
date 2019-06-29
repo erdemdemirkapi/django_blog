@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'home',
     'post',
+
+     'django_cleanup.apps.CleanupConfig', 
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -8,6 +8,9 @@
                 <div class="col-md-6 col-md-offset-3">
                     <div class="thumbnail">
                         <div class="caption">
+                            {% if post.image %}
+                                <img src="{{ post.image.url }}" class="img-responsive">
+                            {% endif %}
                             <h3>{{ post.title }} <small> {{ post.publishing_date | timesince}} ago</small> </h3>
                             <p>{{ post.content | linebreaks | truncatechars:50}}</p>
                             <p>
