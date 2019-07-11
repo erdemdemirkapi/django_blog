@@ -4,6 +4,7 @@ from django.utils.text import slugify
 from ckeditor.fields import RichTextField
 
 class Post(models.Model):
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length = 120)
     content = RichTextField()
     publishing_date = models.DateTimeField(auto_now_add = True)
@@ -40,3 +41,10 @@ class Post(models.Model):
     
     class Meta:
         ordering = ['-publishing_date', 'id']
+
+class Comment(models.Model):
+    name = models.CharField(max_length = 200)
+    content = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    
+    post = models.ForeignKey('post.Post', related_name = 'comments', on_delete = models.CASCADE)
