@@ -2,6 +2,10 @@
 version: '3.7'
 
 services:
+  db:
+    image: postgres:11.1
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
   web:
     build: .
     command: python /django_blog/manage.py runserver 0.0.0.0:8000
@@ -9,3 +13,7 @@ services:
       - .:/django_blog
     ports:
       - 8000:8000
+    depends_on:
+      - db
+volumes:
+  postgres_data:
