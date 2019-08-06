@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
     'ckeditor',
     'captcha',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

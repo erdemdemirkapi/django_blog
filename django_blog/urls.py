@@ -26,6 +26,8 @@ urlpatterns = [
 
     path('post/', include('post.urls')),
     path('accounts/', include('accounts.urls')),
+
+    path('api/', include('post.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
