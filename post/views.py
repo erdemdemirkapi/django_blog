@@ -8,7 +8,7 @@ from django.db.models import Q
 from rest_framework import generics
 from .serializers import PostSerializer
 
-class PostList(generics.ListAPIView):
+class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
